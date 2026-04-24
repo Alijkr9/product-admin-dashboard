@@ -41,7 +41,7 @@ When('I fill in the product name {string}, price {string}, category {string}, an
         await page.getByTestId('product-price-input').locator('input').fill(price);
         await page.getByTestId('product-category-input').locator('input').fill(category);
 
-        // FIX: Only target the visible textarea to avoid the MUI hidden shadow element
+        // Only target the visible textarea to avoid the MUI hidden shadow element
         await page.getByTestId('product-description-input').locator('textarea:visible').fill(description);
     });
 
