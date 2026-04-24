@@ -21,12 +21,14 @@ let products = [...mockProducts];
 
 export const db = {
   getUsers: () => users,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   addUser: (user: any) => {
     const newUser = { ...user, id: faker.string.uuid() };
     users = [newUser, ...users];
     return newUser;
   },
   getProducts: () => products,
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   addProduct: (product: any) => {
     const newProduct = { ...product, id: faker.string.uuid() };
     products = [newProduct, ...products];
